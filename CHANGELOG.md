@@ -12,6 +12,10 @@ and this project adheres to
 
 - ✨(frontend) add customization for translations #857
 
+### Fixed
+
+- 🐛(backend) set ``usedforsecurity=False`` for MD5 ETag comparison #PR
+
 ## [3.3.0] - 2025-05-06
 
 ### Added
@@ -38,7 +42,6 @@ and this project adheres to
 
 ### Fixed
 - 🐛(y-provider) increase JSON size limits for transcription conversion #989
-- 🐛(backend) set ``usedforsecurity=False`` for MD5 ETag comparison #PR
 
 ### Removed
 
