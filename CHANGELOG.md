@@ -38,6 +38,7 @@ and this project adheres to
 
 ### Fixed
 - 🐛(y-provider) increase JSON size limits for transcription conversion #989
+- 🐛(backend) set ``usedforsecurity=False`` for MD5 ETag comparison #PR
 
 ### Removed
 
