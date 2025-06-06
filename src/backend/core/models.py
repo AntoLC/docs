@@ -552,9 +552,11 @@ class Document(MP_Node, BaseModel):
                     raise
             else:
                 # Compare the existing ETag with the MD5 hash of the new content.
+                # ``usedforsecurity=False`` indicates that this hash is not used
+                # for security purposes, which avoids bandit warning ``B324``.
                 has_changed = (
                     response["ETag"].strip('"')
-                    != hashlib.md5(bytes_content).hexdigest()  # noqa: S324
+                    != hashlib.md5(bytes_content, usedforsecurity=False).hexdigest()
                 )
 
             if has_changed:
