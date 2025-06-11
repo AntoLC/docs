@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { css } from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 import { Box } from '@/components';
 import { useCunninghamTheme } from '@/cunningham';
@@ -19,10 +20,14 @@ export function MainLayout({
 }: PropsWithChildren<MainLayoutProps>) {
   const { isDesktop } = useResponsiveStore();
   const { colorsTokens } = useCunninghamTheme();
+  const { t } = useTranslation();
   const currentBackgroundColor = !isDesktop ? 'white' : backgroundColor;
 
   return (
     <Box className="--docs--main-layout">
+      <Box as="a" href={`#${MAIN_LAYOUT_ID}`} className="skip-link">
+        {t('Skip to main content')}
+      </Box>
       <Header />
       <Box
         $direction="row"
