@@ -16,8 +16,9 @@ jobs:
         with:
           script: |
             try {
+              const baseOwner = context.payload.pull_request.base.repo.owner.login;
               await github.rest.orgs.checkMembershipForUser({
-                org: context.repo.owner,
+                org: baseOwner,
                 username: context.actor
               });
               return true;
