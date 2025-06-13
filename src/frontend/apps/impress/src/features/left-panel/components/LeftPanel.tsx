@@ -1,6 +1,7 @@
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 import { createGlobalStyle, css } from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 import { Box, SeparatedSection } from '@/components';
 import { useCunninghamTheme } from '@/cunningham';
@@ -23,6 +24,8 @@ const MobileLeftPanelStyle = createGlobalStyle`
 export const LeftPanel = () => {
   const { isDesktop } = useResponsiveStore();
 
+  const { t } = useTranslation();
+
   const { colorsTokens, spacingsTokens } = useCunninghamTheme();
   const { togglePanel, isPanelOpen } = useLeftPanelStore();
 
@@ -36,6 +39,8 @@ export const LeftPanel = () => {
     <>
       {isDesktop && (
         <Box
+          as="nav"
+          aria-label={t('Main navigation')}
           data-testid="left-panel-desktop"
           $css={`
             height: calc(100vh - ${HEADER_HEIGHT}px);
@@ -74,6 +79,8 @@ export const LeftPanel = () => {
             className="--docs--left-panel-mobile"
           >
             <Box
+              as="nav"
+              aria-label={t('Main navigation')}
               data-testid="left-panel-mobile"
               $css={css`
                 width: 100%;

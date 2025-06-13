@@ -194,6 +194,16 @@ docs
 └── src - main source code directory, containing the core application code, libraries, and modules of the project.
 ```
 
+## Accessibility
+
+The interface now includes a "Skip to main content" link and proper `<nav>` semantics for the side menu. Automated a11y checks run via **jest-axe**.
+
+Run tests with:
+
+```bash
+yarn test
+```
+
 ## Credits ❤️
 
 ### Stack
