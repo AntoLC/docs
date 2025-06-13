@@ -1,4 +1,4 @@
-# La Suite Docs – System & Requirements (2025-06)
+# La Suite TOTO – System & Requirements (2025-06)
 
 ## 1. Quick-Reference Matrix (single VM / laptop)
 
