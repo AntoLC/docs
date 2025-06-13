@@ -1,7 +1,6 @@
 ## Purpose
 
-Describe the purpose of this pull request. 
-
+Describe the purpose of this pull request...
 
 ## Proposal
 
