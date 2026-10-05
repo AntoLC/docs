@@ -177,7 +177,9 @@ export const DocTree = ({ currentDoc }: DocTreeProps) => {
       data-testid="doc-tree"
       $height="100%"
       role="tree"
-      aria-label={t('Document tree')}
+      aria-label={t('Document tree', {
+        description: 'Accessible name of the tree of documents',
+      })}
       $css={css`
         /**
         * TODO: When this pull request is merged (https://github.com/suitenumerique/ui-kit/pull/215), we 
@@ -211,6 +213,10 @@ export const DocTree = ({ currentDoc }: DocTreeProps) => {
       <Box id={ID_TREE_KEYBOARD_INSTRUCTIONS} className="sr-only">
         {t(
           'Use the up and down arrow keys to move between documents, and Enter to open one. Press F2 to reach the actions of a document and to move between them, use Escape to go back to the document list.',
+          {
+            description:
+              'Screen reader keyboard instructions of the document tree',
+          },
         )}
       </Box>
       <Box

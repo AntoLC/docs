@@ -62,6 +62,8 @@ export const useUploadFile = (docId: string) => {
           t(
             'The file "{{fileName}}" is too large. Maximum file size is {{maxFileSize}}.',
             {
+              description:
+                'Toast shown when an uploaded file exceeds the size limit',
               fileName: file.name,
               maxFileSize: formatFileSize(maxFileSize),
             },

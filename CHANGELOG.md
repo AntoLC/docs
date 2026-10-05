@@ -9,6 +9,7 @@ and this project adheres to
 ### Added
 
 - ✨(docspec) handle DocSpec 4xx/5xx import errors distinctly #2552
+- 🌐(frontend) add Crowdin translator context #2785
 
 ### Changed
 
